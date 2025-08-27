@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Akaruu Archive Extension",
+  "version": "1.0.0",
+  "description": "Akaruu Archive Extension for Chrome/Firefox",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "imgs/32.png",
+    "32": "imgs/32.png",
+    "48": "imgs/64.png",
+    "128": "imgs/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/channels/522596109789560863/681657010013470725"],
+      "js": ["content.js"]
+    }
+  ]
+}
